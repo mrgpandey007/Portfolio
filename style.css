@@ -1,0 +1,252 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#fff;font-family:sans-serif;overflow-x:hidden;scroll-behavior:smooth}
+
+#particles-js{position:fixed;width:100%;height:100%;z-index:-2}
+
+/* glowing cursor */
+.cursor{position:fixed;width:20px;height:20px;border-radius:50%;background:cyan;pointer-events:none;mix-blend-mode:difference;z-index:999}
+
+nav{position:fixed;width:100%;top:0;display:flex;justify-content:center;gap:30px;padding:15px;background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);z-index:1000}
+nav a{color:white;text-decoration:none;transition:.3s}
+nav a:hover{color:cyan}
+
+section{padding:100px 10%}
+
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.hero h1{font-size:3.5rem;background:linear-gradient(90deg,cyan,purple);-webkit-background-clip:text;color:transparent;animation:glow 2s infinite alternate}
+@keyframes glow{from{text-shadow:0 0 10px cyan}to{text-shadow:0 0 25px purple}}
+
+.typing{margin-top:10px;color:cyan}
+.grid{display:grid;gap:25px}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+
+.card{background:rgba(255,255,255,0.05);padding:20px;border-radius:15px;text-align:center;backdrop-filter:blur(15px);transition:.4s}
+.card:hover{transform:scale(1.05) rotateX(5deg);box-shadow:0 0 30px cyan}
+
+.btn{display:inline-block;margin-top:10px;padding:10px 15px;border:1px solid cyan;border-radius:8px;color:white;text-decoration:none;transition:.3s}
+.btn:hover{background:cyan;color:black}
+.section-title{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:50px;
+color:#00f7ff;
+}
+
+.skills-title{
+  text-align:center;
+  font-size:2.5rem;
+  margin-bottom:40px;
+}
+
+.skills-title span{
+  color:#009dff;
+}
+
+/* FIX: 4–5 ITEMS PER ROW */
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(5, 1fr);  /* fixed 5 per row */
+  gap:40px;
+  justify-items:center;
+}
+
+/* Skill Box */
+.skill-item{
+  text-align:center;
+  transition:0.3s;
+}
+
+/* Icons */
+.skill-item img,
+.skill-item i{
+  width:55px;
+  height:55px;
+  font-size:55px;
+  margin-bottom:8px;
+}
+
+/* Text */
+.skill-item p{
+  font-size:14px;
+  color:#ccc;
+}
+
+/* Hover */
+.skill-item:hover{
+  transform:scale(1.15);
+}
+
+.skill-item:hover img,
+.skill-item:hover i{
+  filter: drop-shadow(0 0 10px cyan);
+}
+
+/* Title */
+.project-title{
+  text-align:center;
+  font-size:2.5rem;
+  margin-bottom:40px;
+}
+
+.project-title span{
+  color:#ff4d4d;
+}
+
+/* Grid */
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+/* Card */
+.project-card{
+  background:rgba(255,255,255,0.05);
+  padding:20px;
+  border-radius:15px;
+  backdrop-filter:blur(15px);
+  transition:0.4s;
+}
+
+.project-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 25px cyan;
+}
+
+/* Title */
+.project-card h3{
+  font-size:2.0rem;
+  margin-bottom:10px;
+}
+
+/* Description */
+.project-desc{
+  font-size:1.5rem;
+  color:#ccc;
+  margin-bottom:15px;
+}
+
+/* Tech tags */
+.tech{
+  margin-bottom:15px;
+}
+
+.tech span{
+  display:inline-block;
+  background:rgba(0,255,255,0.1);
+  color:cyan;
+  padding:5px 10px;
+  margin:3px;
+  border-radius:8px;
+  font-size:1.2rem;
+}
+
+/* Buttons */
+.project-buttons{
+  text-align :center;
+  margin-top:10px;
+  font-size: 1.6rem;
+}
+.Danger{
+  color: red;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+.btn{
+  display:inline-block;
+  padding:8px 12px;
+  margin-right:10px;
+  border:1px solid cyan;
+  border-radius:10px;
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:cyan;
+  color:rgb(58, 55, 55);
+}
+
+.btn.outline{
+  background:transparent;
+}
+.btn.outline:hover{
+  background:transparent;
+  color:cyan;
+  border-color:cyan;
+  box-shadow:0 0 15px cyan;
+}
+.home-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+.home-left{
+  flex:1;
+}
+
+.home-left h1{
+  font-size:3rem;
+}
+
+.home-left span{
+  color:cyan;
+}
+
+.home-left p{
+  margin-top:15px;
+  color:#aaa;
+  max-width:500px;
+}
+
+.home-buttons{
+  margin-top:20px;
+}
+
+.btn.primary{
+  background:cyan;
+  color:black;
+  margin-right:10px;
+}
+
+.social-icons{
+  margin-top:20px;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.social-icons a{
+  width:45px;
+  height:45px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:12px;
+  font-size:18px;
+  color:white;
+  transition:0.3s;
+}
+
+.social-icons a:hover{
+  background:cyan;
+  color:black;
+  transform:translateY(-5px);
+  box-shadow:0 0 15px cyan;
+}
+
+.home-right img{
+  width:400px;
+  height:420px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid cyan;
+  box-shadow:0 0 30px cyan;
+}
